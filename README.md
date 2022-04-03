@@ -18,13 +18,13 @@ The original code set used nested looping logic in order to complete the analysi
 
 While accurate, this is heavy processing work.  For just twelve subject companies with trading data already aggregated to the year level, analysis took nearly one second to complete:
 
-![VBA_Challenge_2017_Before_Refactoring.png](/Resources/VBA_Challenge_2017_Before_Refactoring.png.png) ![VBA_Challenge_2018_Before_Refactoring.png](/Resources/VBA_Challenge_2018_Before_Refactoring.png)
+![VBA_Challenge_2017_Before_Refactoring.png](/Resources/VBA_Challenge_2017_Before_Refactoring.png) ![VBA_Challenge_2018_Before_Refactoring.png](/Resources/VBA_Challenge_2018_Before_Refactoring.png)
 
 While the original logic achieved accurate results it was clear performance could be a problem on larger data sets.  To address this issue the code was refactored in order to make it more readable as well as more performant.  This construct requires less memory and CPU time for processing, speeding up the application and therefore creating a better user experience.  The savings is realized because the loop is exited when the end of each company's data set is reached rather than continuing to process rows.
 
-![VBA_Challenge_Refactored_Loops.png(/Resources/VBA_Challenge_Refactored_Loops.png)
+![VBA_Challenge_Refactored_Loops](/Resources/VBA_Challenge_Refactored_Loops.png)
 
-As you can see, this modification yielded approximately a 70% reduction in execution time: 
+As you can see, this modification yielded approximately a 85% reduction in execution time: 
 
 ![VBA_Challenge_2017_After_Refactoring.png](/Resources/VBA_Challenge_2017_After_Refactoring.png) ![VBA_Challenge_2018_After_Refactoring.png](/Resources/VBA_Challenge_2018_After_Refactoring.png)
 
